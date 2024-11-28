@@ -31,15 +31,24 @@
 
 <body>
 	<div class="loading"></div>
-	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
+		<audio id="myAudio" class="song" controls loop>
+        <source src="Ed_Sheeran_-_Perfect__Official_Music_Video_(128k).mp3"></source>
 	   Your browser isn't invited for super fun audio time.
     </audio>
+	<script>
+        const audio = document.getElementById('myAudio');
+
+        // Wait until the audio is ready to play
+        audio.addEventListener('loadedmetadata', () => {
+            // Set the start time
+            audio.currentTime = 19;
+        });
+    </script>
     <div class="balloons text-center" id="b1">
-    	<h2 style="color:#F2B300;">H</h2>
+    	<h2 style="color:#F2B300;">2</h2>
     </div>
     <div class="balloons text-center" id="b2">
-    	<h2 style="color:#0719D4;">BD</h2>
+    	<h2 style="color:#0719D4;">0</h2>
     </div>
 	<div class="balloons text-center" id="b3">
     	<h2 style="color:#D14D39;">R</h2>
@@ -102,7 +111,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row message">
+		<div class="row message text-center">
 			<div class="col-md-12">
 				<p>Today is...</p>
 				<p>as beautiful as other days</p>
